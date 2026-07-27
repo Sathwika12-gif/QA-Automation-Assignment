@@ -1,8 +1,9 @@
 const { test, expect } = require('@playwright/test');
 const { API_BASE_URL } = require('../test-data/urls');
+require('dotenv').config();
 
 const headers = {
-    'x-api-key': 'pro_c233c44882d54fe46cdf6b4ec562bd77aa64334489bc28f2'
+    'x-api-key': process.env.REQRES_API_KEY
 };
 
 const user = {
